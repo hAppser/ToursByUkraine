@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Онлайн тури 360</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="header" id="header">
+        <h1 class="header__title">Онлайн 360 тури Україною </h1>
+        <button class="header__button" id="myBtn">Замовити тур</button>
+</header>
+
+<menu>
+    <nav class="menu__navigation">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="#orders">Міста</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#header" id="myBtn">Замовити</a></li>
+        </ul>
+    </nav>
+</menu>
+<main>
+    <div class="orders" id="orders">
+        <div class="orders__first-row">
+            <div class="order__kiev">
+                <p class="order__kiev-title">Київ</p>
+                    <a href="kiev_tour.html">
+                        <img src="images/kiyv.jpg" alt="">
+                    </a>
+            </div>
+            <div class="order__lviv">
+                <p class="order__lviv-title">Львів</p>
+                <a href="lviv_tour.html">
+                    <img src="images/lviv.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="order__odessa">
+            <p class="order__odessa-title">Одеса</p>
+            <a href="odesa_tour.html">
+                <img src="images/odessa.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="about-tours" id="about-tours">
+        <div class="about-tours__first"><p>Бажаєте подорожувати Україною, але не можете це зробити? Вихід є! <br>Замовляйте онлайн тур Україною.</p><img src="images/vr.jpeg" alt=""></div>
+        <div class="about-tours__second"><p>З будь-якої точки світу ви можете насолодитись краєвидами міст України. До того ж є можливість дізнатись історію та цікаві факти о спорудах.</p><img src="images/telephone.jpg" alt=""></div>
+        <div class="about-tours__third"><p>Також до своєї подорожі можна замовити гіда, який розповідатиме історію міста.</p><img src="images/gid.jpg" alt=""></div>
+    </div>
+    
+        
+</main>
+<div class="faq" id="faq">
+    <h1 class="faq__title">FAQ</h1>
+        <button class="collapsible">Чи є обмеження кількості переглядів на один девайс?</button>            
+        <div class="accordion">
+            <p>Так, є. Не більше 4-х переглядів.</p>
+        </div>
+        <button class="collapsible">Чи дозволяється записувати відео або аудіо?</button>            
+        <div class="accordion">
+            <p>Аудіо - так, відео - ні.</p>
+        </div>
+        <button class="collapsible">Можна заплатити готівкою?</button>            
+        <div class="accordion">
+            <p>Ні, оплата здійснюється лише через банківській рахунок або інтернет-гаманець.</p>
+        </div>
+        
+    </div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 class="form-title">Замовити тур</h2>
+          
+    </div>
+    <div class="modal-body">
+        <form method="">
+            <label for="fname">Ім'я</label>
+            <input type="text" id="fname" name="fname" placeholder="Ім'я..." required>  
+         
+            <label for="lname">Прізвище</label>
+            <input type="text" id="lname" name="lname" placeholder="Прізвище..." required>
+            
+            <label for="email">Email</label>
+            <input type="text" placeholder="Введіть email" name="email" required>
+
+            <label for="city">Місто</label>
+            <select id="city" name="city" required>
+              <option value="kiyv">Київ</option>
+              <option value="lviv">Львів</option>
+              <option value="odessa">Одеса</option>
+            </select>
+            
+            <input type="checkbox" name="radio" id="form-gid">
+            <label for="radio">Гід</label>
+            <br>
+            <br>
+            <input type="submit" value="Замовити" id="get-order">
+          </form>
+    </div>
+  </div>
+</div>
+<div class="alert activated">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span> 
+    Ой-ой, помилка. Будь ласка, спробуйте пізніше або перейдіть до розділу "Міста" та натисність на картинку міста до якого ви хочете завітати</div>
+<footer class="footer">
+    <p class="footer__copiright">©2021. Усі права захищені. <br>All rights reserved by Danil Listopad.</p>
+    <div class="icon-bar">
+        <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.google.com" target="_blank" class="google"><i class="fa fa-google"></i></a>
+        <a href="https://www.youtube.com" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a>
+      </div>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
